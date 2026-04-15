@@ -300,6 +300,70 @@ img {
   margin: 0;
 }
 
+/* ── Sections ── */
+.section {
+  padding: var(--space-9) 0;
+}
+
+.section--light {
+  background-color: var(--bg-primary);
+}
+
+.section--alt {
+  background-color: var(--bg-alt);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: calc(-1 * var(--space-5)) 0 var(--space-7) 0;
+}
+
+/* ── Cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.card {
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(26, 37, 34, 0.08);
+}
+
+.card-img {
+  aspect-ratio: 4 / 3;
+  background-color: var(--carbon-600);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: var(--space-4);
+}
+
+.card-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.2;
+}
+
+.card-desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* ── Desktop (768px+) ── */
 @media (min-width: 768px) {
   .header-subtitle {
@@ -333,5 +397,9 @@ img {
 
   .hero-claim {
     font-size: var(--text-3xl);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
