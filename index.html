@@ -3,10 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Killkir Etxea</title>
+  <meta name="description" content="Killkir Etxea — asociacion kultural en Bilbao. Talleres, encuentros y comunidad.">
+  <title>Killkir Etxea — Asociacion Kultural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="/" class="header-logo">KILLKIR ETXEA</a>
+        <span class="header-subtitle">asociacion kultural</span>
+      </div>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+      </button>
+
+      <nav class="header-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="#talleres" class="nav-link">Talleres</a></li>
+          <li><a href="#encuentros" class="nav-link">Encuentros</a></li>
+          <li><a href="#quienes-somos" class="nav-link">Quienes somos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="/eu/" class="lang-link">EU</a>
+          <span class="lang-sep">|</span>
+          <a href="/" class="lang-link lang-active" aria-current="page">ES</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <script src="script.js"></script>
 </body>
