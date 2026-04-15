@@ -1,1 +1,136 @@
-/* Sistema de diseño Killkir Etxea */
+/* Sistema de diseno Killkir Etxea */
+
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;700&display=swap');
+
+/* ── Custom Properties ── */
+:root {
+  /* Gris Carbon */
+  --carbon-50:  #E8ECEB;
+  --carbon-100: #D1D9D7;
+  --carbon-200: #A3B0AB;
+  --carbon-300: #8A9C96;
+  --carbon-400: #6E7F79;
+  --carbon-500: #5E716B;
+  --carbon-600: #4E635D;
+  --carbon-700: #3A4A45;
+  --carbon-800: #2A3734;
+  --carbon-900: #1A2522;
+
+  /* Cian */
+  --cyan-50:  #E6F9F8;
+  --cyan-100: #C0F0ED;
+  --cyan-200: #9AE5E0;
+  --cyan-300: #76DAD4;
+  --cyan-400: #53CFC7;
+  --cyan-500: #40B9B1;
+  --cyan-600: #2FA39C;
+  --cyan-700: #1F7E78;
+  --cyan-800: #155E59;
+  --cyan-900: #0F3D3A;
+
+  /* Verde Lima */
+  --lime-50:  #F0FCE5;
+  --lime-100: #E2FACE;
+  --lime-200: #D4F9B8;
+  --lime-300: #C6F7A2;
+  --lime-400: #B9F58C;
+  --lime-500: #9CDA6F;
+  --lime-600: #7EBF53;
+  --lime-700: #5A8C3A;
+  --lime-800: #436B28;
+  --lime-900: #2D4A17;
+
+  /* Lavanda */
+  --lavender-50:  #EDEEF4;
+  --lavender-100: #D5D8E5;
+  --lavender-200: #BCC3D6;
+  --lavender-300: #A3ABC6;
+  --lavender-400: #8994B6;
+  --lavender-500: #747FA1;
+  --lavender-600: #5F6A8C;
+  --lavender-700: #4A5370;
+  --lavender-800: #383F55;
+  --lavender-900: #262B3B;
+
+  /* Semanticos */
+  --bg-primary:     #FAFBFA;
+  --bg-alt:         #E8ECEB;
+  --text-primary:   var(--carbon-900);
+  --text-secondary: var(--carbon-400);
+  --text-tertiary:  var(--carbon-200);
+  --accent:         var(--cyan-400);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Tipografia */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'Oswald', sans-serif;
+
+  --text-xs:  12px;
+  --text-sm:  14px;
+  --text-base: 16px;
+  --text-lg:  18px;
+  --text-xl:  24px;
+  --text-2xl: 36px;
+  --text-3xl: 48px;
+  --text-5xl: 72px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Utilidades de texto ── */
+.text-primary   { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary  { color: var(--text-tertiary); }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  padding-bottom: var(--space-3);
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  margin-bottom: var(--space-6);
+}
+
+/* ── Layout ── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+.text-container {
+  max-width: 640px;
+}
