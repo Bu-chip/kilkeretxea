@@ -407,6 +407,69 @@ img {
   background-color: var(--lime-50);
 }
 
+/* ── Contact (Kontaktua) ── */
+.contact-info {
+  margin-bottom: var(--space-6);
+}
+
+.contact-line {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+.contact-email {
+  color: var(--cyan-600);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-email:hover {
+  color: var(--cyan-400);
+}
+
+.contact-location {
+  color: var(--text-secondary);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.btn-outline {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  color: var(--carbon-900);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--cyan-400);
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: var(--cyan-50);
+}
+
+/* ── Footer ── */
+.site-footer {
+  background-color: var(--carbon-600);
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-xs);
+  color: var(--carbon-200);
+  margin: 0;
+}
+
 /* ── Desktop (768px+) ── */
 @media (min-width: 768px) {
   .header-subtitle {
