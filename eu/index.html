@@ -3,10 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Killkir Etxea</title>
+  <meta name="description" content="Killkir Etxea — Bilboko elkarte kulturala. Tailerrak, topaketak eta komunitatea.">
+  <title>Killkir Etxea — Elkarte Kulturala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-brand">
+        <a href="/eu/" class="header-logo">KILLKIR ETXEA</a>
+        <span class="header-subtitle">elkarte kulturala</span>
+      </div>
+
+      <button class="menu-toggle" aria-label="Menua ireki" aria-expanded="false">
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+      </button>
+
+      <nav class="header-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="#tailerrak" class="nav-link">Tailerrak</a></li>
+          <li><a href="#topaketak" class="nav-link">Topaketak</a></li>
+          <li><a href="#nor-gara" class="nav-link">Nor gara</a></li>
+          <li><a href="#kontaktua" class="nav-link">Kontaktua</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="/eu/" class="lang-link lang-active" aria-current="page">EU</a>
+          <span class="lang-sep">|</span>
+          <a href="/" class="lang-link">ES</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-claim">ESPERIMENTAZIO ARTISTIKORAKO KOMUNITATE GUNEA</h1>
+      <p class="hero-location">Bilbo, Euskadi</p>
+    </div>
+  </section>
+
+  <section id="tailerrak" class="section section--light">
+    <div class="container">
+      <h2 class="section-title">TAILERRAK</h2>
+      <p class="section-subtitle">Lantegiak eta ikastaroak</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <h3 class="card-title">Serigrafia</h3>
+            <p class="card-desc">Serigrafia artisauko tailer praktikoa. Ikasi zure diseinuak oihalean eta paperean estanpatzen.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <h3 class="card-title">Sintesia</h3>
+            <p class="card-desc">Soinu esplorazio eta musika kolektiboa. Sintetizadore modularrak, samplerrak eta esperimentazio librea.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <h3 class="card-title">Zinea</h3>
+            <p class="card-desc">Fanzineak eta argitalpen independenteak sortzea. Ilustrazioa, collagea eta autoedizioa.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="topaketak" class="section section--alt">
+    <div class="container">
+      <h2 class="section-title">TOPAKETAK</h2>
+      <p class="section-subtitle">Elkartzeak eta jarduerak</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <h3 class="card-title">Topaketa musikalak</h3>
+            <p class="card-desc">Zuzeneko musika saio irekiak. Jam saioak, mikro-kontzertuak eta entzunaldi kolektiboak.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <h3 class="card-title">Jarduera irekiak</h3>
+            <p class="card-desc">Auzoarentzako jarduera irekiak. Hitzaldiak, proiekzioak, aurkezpenak eta topaketa informalak.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="nor-gara" class="section section--light">
+    <div class="container">
+      <h2 class="section-title">NOR GARA</h2>
+      <p class="section-subtitle">Gure burua ezagutu</p>
+
+      <div class="about-photo"></div>
+
+      <div class="text-container">
+        <p class="about-text">Killkir Etxea Bilbon dagoen sorkuntza eta esperimentazio artistikorako komunitate gunea da. Musikariak, artista plastikoak eta DIY jendea, kultur laborategian bihurtutako tailer mekaniko zahar batean elkarrekin lan egiten.</p>
+      </div>
+
+      <div class="tag-list">
+        <span class="tag tag--cyan">belaunaldi artekoa</span>
+        <span class="tag tag--lime">feminista</span>
+        <span class="tag tag--cyan">inklusibo</span>
+        <span class="tag tag--lime">DIY</span>
+        <span class="tag tag--cyan">intersekzionala</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontaktua" class="section section--alt">
+    <div class="container">
+      <h2 class="section-title">KONTAKTUA</h2>
+      <p class="section-subtitle">Harremana</p>
+
+      <div class="contact-info">
+        <p class="contact-line">
+          <a href="mailto:killkiretxea@gmail.com" class="contact-email">killkiretxea@gmail.com</a>
+        </p>
+        <p class="contact-line contact-location">Bilbo, Euskadi</p>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://www.instagram.com/killkiretxea/" class="btn-outline" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/killkiretxea/" class="btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">&copy; Killkir Etxea Elkarte Kulturala 2024&mdash;2026</p>
+    </div>
+  </footer>
 
   <script src="../script.js"></script>
 </body>
