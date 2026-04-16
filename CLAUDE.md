@@ -22,7 +22,7 @@ kilkir_etxea_web/
 - Cian:         #E6F9F8 / #9AE5E0 / #53CFC7 / #2FA39C / #0F3D3A
 - Verde Lima:   #F0FCE5 / #D4F9B8 / #B9F58C / #7EBF53 / #2D4A17
 - Lavanda:      #EDEEF4 / #BCC3D6 / #8994B6 / #5F6A8C / #262B3B
-- Fondo:        #FAFBFA (blanco roto)
+- Fondo:        #F5F7F4 (blanco verdoso sutil) / #E4E9E6 (alterno)
 - Texto:        #1A2522 (NUNCA #000000)
 
 ### Tipografía
@@ -52,10 +52,10 @@ kilkir_etxea_web/
 ### Secciones de la página (en este orden)
 1. Header (fondo #4E635D, logo verde lima, nav blanco)
 2. Hero (foto + overlay 60% + claim Bebas Neue 48px)
-3. Tailerrak / Talleres (fondo #FAFBFA, grid tarjetas)
-4. Topaketak / Encuentros (fondo #E8ECEB, grid tarjetas)
-5. Nor gara / Quiénes somos (fondo #FAFBFA, foto + texto + tags)
-6. Kontaktua / Contacto (fondo #E8ECEB)
+3. Tailerrak / Talleres (fondo #F5F7F4, grid tarjetas)
+4. Topaketak / Encuentros (fondo #E4E9E6, grid tarjetas)
+5. Nor gara / Quiénes somos (fondo #F5F7F4, foto + texto + tags)
+6. Kontaktua / Contacto (fondo #E4E9E6)
 7. Footer (fondo #4E635D)
 
 ### Idiomas

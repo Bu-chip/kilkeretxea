@@ -51,8 +51,8 @@
   --lavender-900: #262B3B;
 
   /* Semanticos */
-  --bg-primary:     #FAFBFA;
-  --bg-alt:         #E8ECEB;
+  --bg-primary:     #F5F7F4;
+  --bg-alt:         #E4E9E6;
   --text-primary:   var(--carbon-900);
   --text-secondary: var(--carbon-400);
   --text-tertiary:  var(--carbon-200);
