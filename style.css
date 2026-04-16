@@ -51,10 +51,10 @@
   --lavender-900: #262B3B;
 
   /* Semanticos */
-  --bg-primary:     #F5F7F4;
-  --bg-alt:         #E4E9E6;
+  --bg-primary:     #EFF2EE;
+  --bg-alt:         #DDE3DE;
   --text-primary:   var(--carbon-900);
-  --text-secondary: var(--carbon-400);
+  --text-secondary: var(--carbon-600);
   --text-tertiary:  var(--carbon-200);
   --accent:         var(--cyan-400);
 
@@ -447,10 +447,12 @@ img {
 
 .tag--cyan {
   background-color: var(--cyan-50);
+  border: 1px solid var(--cyan-400);
 }
 
 .tag--lime {
   background-color: var(--lime-50);
+  border: 1px solid var(--lime-400);
 }
 
 /* ── Contact (Kontaktua) ── */
@@ -468,7 +470,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--cyan-600);
+  color: var(--cyan-900);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -478,7 +480,7 @@ img {
 }
 
 .contact-email:hover {
-  color: var(--cyan-400);
+  color: var(--cyan-600);
 }
 
 .contact-location {
