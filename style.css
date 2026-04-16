@@ -385,14 +385,19 @@ img {
 }
 
 /* ── About (Nor gara) ── */
+.about-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-7);
+}
+
 .about-photo-wrap {
   position: relative;
-  aspect-ratio: 21 / 9;
-  max-height: 400px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background-color: var(--carbon-600);
   border-radius: 4px;
-  margin-bottom: var(--space-7);
 }
 
 .about-photo {
@@ -535,5 +540,9 @@ img {
 
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
