@@ -339,11 +339,17 @@ img {
   box-shadow: 0 1px 3px rgba(26, 37, 34, 0.08);
 }
 
-.card-img {
+.card-img-wrap {
+  position: relative;
   aspect-ratio: 4 / 3;
-  width: 100%;
-  object-fit: cover;
+  overflow: hidden;
   background-color: var(--carbon-600);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -370,14 +376,20 @@ img {
 }
 
 /* ── About (Nor gara) ── */
-.about-photo {
-  width: 100%;
-  max-height: 400px;
+.about-photo-wrap {
+  position: relative;
   aspect-ratio: 21 / 9;
-  object-fit: cover;
+  max-height: 400px;
+  overflow: hidden;
   background-color: var(--carbon-600);
   border-radius: 4px;
   margin-bottom: var(--space-7);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
