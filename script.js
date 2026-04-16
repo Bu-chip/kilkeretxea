@@ -1,4 +1,4 @@
-// Killkir Etxea scripts
+// Kilker Etxea scripts
 
 (function () {
   var toggle = document.querySelector('.menu-toggle');

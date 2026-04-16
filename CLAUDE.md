@@ -1,7 +1,7 @@
-# Killkir Etxea — Web MVP
+# Kilker Etxea — Web MVP
 
 ## Proyecto
-Web estática single-page para Killkir Etxea, asociación cultural de Bilbao.
+Web estática single-page para Kilker Etxea, asociación cultural de Bilbao.
 Bilingüe EU/ES. Hosted en GitHub Pages. HTML + CSS + JS vanilla.
 
 ## Estructura

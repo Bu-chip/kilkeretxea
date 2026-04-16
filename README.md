@@ -1,3 +1,3 @@
-# Killkir Etxea
+# Kilker Etxea
 
-Web de Killkir Etxea, asociación cultural de Bilbao.
+Web de Kilker Etxea, asociación cultural de Bilbao.
