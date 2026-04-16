@@ -1,8 +1,5 @@
 /* Sistema de diseno Killkir Etxea */
 
-/* ── Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;700&display=swap');
-
 /* ── Custom Properties ── */
 :root {
   /* Gris Carbon */
@@ -185,7 +182,7 @@ img {
 .menu-toggle {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--space-1);
   background: none;
   border: none;
   cursor: pointer;
@@ -196,7 +193,7 @@ img {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--bg-primary);
   border-radius: 1px;
   transition: transform 0.3s, opacity 0.3s;
 }
@@ -227,7 +224,7 @@ img {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: var(--text-base);
-  color: #fff;
+  color: var(--bg-primary);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -247,14 +244,14 @@ img {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: var(--text-sm);
-  color: var(--carbon-200);
+  color: var(--carbon-50);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .lang-link:hover,
 .lang-active {
-  color: #fff;
+  color: var(--bg-primary);
 }
 
 .lang-sep {
@@ -292,7 +289,7 @@ img {
   font-size: var(--text-2xl);
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: var(--bg-primary);
   margin: 0 0 var(--space-4) 0;
 }
 
@@ -321,7 +318,7 @@ img {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: var(--text-base);
-  color: var(--text-secondary);
+  color: var(--carbon-600);
   margin: calc(-1 * var(--space-5)) 0 var(--space-7) 0;
 }
 
@@ -479,7 +476,7 @@ img {
   text-decoration: none;
   padding: var(--space-2) var(--space-5);
   border: 1px solid var(--cyan-400);
-  border-radius: 6px;
+  border-radius: var(--space-2);
   transition: background-color 0.2s;
 }
 
@@ -498,7 +495,7 @@ img {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: var(--text-xs);
-  color: var(--carbon-200);
+  color: var(--carbon-50);
   margin: 0;
 }
 
@@ -531,7 +528,7 @@ img {
 
   .lang-switch {
     padding-left: var(--space-5);
-    border-left: 1px solid var(--carbon-500);
+    border-left: 1px solid var(--carbon-400);
   }
 
   .hero-claim {
