@@ -227,7 +227,8 @@ img {
   font-size: var(--text-base);
   color: var(--bg-primary);
   text-decoration: none;
-  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .nav-link:hover {
@@ -531,6 +532,63 @@ img {
   font-size: var(--text-sm);
   color: var(--carbon-50);
   margin: 0;
+}
+
+/* ── Animations ── */
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: revealIn 0.6s ease-out;
+}
+
+@keyframes revealIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+/* Nav active link */
+.nav-link.nav-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Card hover + Hero parallax — desktop only */
+@media (hover: hover) {
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(26, 37, 34, 0.16);
+  }
+
+  .hero {
+    background-attachment: fixed;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal.is-visible {
+    animation: none;
+  }
+  .card {
+    transition: none;
+  }
 }
 
 /* ── Desktop (768px+) ── */
