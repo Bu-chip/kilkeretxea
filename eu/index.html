@@ -39,6 +39,7 @@
 
       <nav class="header-nav" id="main-nav">
         <ul class="nav-list">
+          <li><a href="#egitaraua" class="nav-link">Egitaraua</a></li>
           <li><a href="#topaketak" class="nav-link">Topaketak</a></li>
           <li><a href="#tailerrak" class="nav-link">Tailerrak</a></li>
           <li><a href="#nor-gara" class="nav-link">Nor gara</a></li>
@@ -53,6 +54,35 @@
     <div class="container hero-content">
       <h1 class="hero-claim">ESPERIMENTAZIO ARTISTIKORAKO KOMUNITATE GUNEA</h1>
       <p class="hero-location">Bilbo, Euskadi</p>
+    </div>
+  </section>
+
+  <section id="egitaraua" class="section section--alt" data-agenda-section>
+    <div class="container">
+      <h2 class="section-title">EGITARAUA</h2>
+      <p class="section-subtitle">Hurrengo hitzorduak</p>
+
+      <!-- Ekitaldiak js/agenda.js-k pintatzen ditu, elkartearen Google
+           Calendar-etik irakurrita (js/calendar.js). Hemen egoera-testuak
+           baino ez daude, hizkuntza bakoitzak bereak izan ditzan. -->
+      <div data-agenda="upcoming">
+        <div class="agenda-grid" data-agenda-list></div>
+
+        <!-- Egoera hutsa. Baztertutako beste idazkera batzuk:
+             · "Agenda garbi, buruan mila plan. Hurrengoa laster dator."
+             · "Aste honetan ez dago ezer kartelean. Pasa zaitez Olabeagatik
+                edo jarraitu Instagramen: hurrengoa prestatzen ari gara." -->
+        <p class="agenda-note" data-agenda-empty hidden>Kilkerra afinatzen ari da: oraintxe ez dago ezer programatuta. Itzuli laster — hemen beti sortzen da zerbait.</p>
+        <p class="agenda-note" data-agenda-error hidden>Agendak ez du erantzuten oraintxe. Saiatu berriro geroxeago.</p>
+      </div>
+
+      <button type="button" class="btn-outline agenda-past-toggle" data-agenda-past-toggle aria-expanded="false" aria-controls="egitaraua-aurrekoak">Aurreko ekitaldiak</button>
+
+      <div id="egitaraua-aurrekoak" class="agenda-past" data-agenda="past" hidden>
+        <div class="agenda-grid" data-agenda-list></div>
+        <p class="agenda-note" data-agenda-empty hidden>Artxiboa estreinatzeko dago oraindik.</p>
+        <p class="agenda-note" data-agenda-error hidden>Agendak ez du erantzuten oraintxe. Saiatu berriro geroxeago.</p>
+      </div>
     </div>
   </section>
 
@@ -186,6 +216,8 @@
     </div>
   </footer>
 
+  <script src="../js/calendar.js"></script>
+  <script src="../js/agenda.js"></script>
   <script src="../script.js"></script>
 </body>
 </html>

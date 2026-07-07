@@ -10,11 +10,14 @@
      KECalendar.getUpcoming(maxResults)
          → Promise con los próximos eventos desde ahora, en orden
            ascendente (el más cercano primero). Si algo falla, resuelve
-           con un array vacío (nunca rompe la página).
+           con un array vacío (nunca rompe la página); ese array lleva
+           la marca `kecError = true` por si la interfaz quiere
+           distinguir "no hay eventos" de "no se pudo cargar".
 
      KECalendar.getPast(maxResults)
          → Promise con los eventos ya pasados, en orden descendente
-           (el más reciente primero). Igual: si falla, array vacío.
+           (el más reciente primero). Igual: si falla, array vacío
+           con `kecError = true`.
 
      KECalendar.formatEvent(event, lang)
          → Convierte un evento crudo de la API en un objeto normalizado:
@@ -243,6 +246,17 @@
     return date && !isNaN(date.getTime()) ? date.getTime() : 0;
   }
 
+  // Resultado que devuelven getUpcoming/getPast cuando algo falla: un
+  // array vacío normal y corriente (la página nunca se rompe) con la
+  // propiedad extra kecError=true, para que la interfaz pueda enseñar
+  // "no se pudo cargar" en vez de "no hay eventos". Los errores no se
+  // cachean, así que la marca nunca llega a sessionStorage.
+  function errorResult() {
+    var failed = [];
+    failed.kecError = true;
+    return failed;
+  }
+
   /* ════════════════════════════════════════════════════════════════════
      API PÚBLICA
      ════════════════════════════════════════════════════════════════════ */
@@ -258,7 +272,8 @@
    * @param {number} [maxResults=10]  Cuántos eventos como máximo.
    * @returns {Promise<Array>}  Eventos crudos de la API (pasar cada uno
    *                            por formatEvent antes de mostrarlo).
-   *                            Si hay cualquier error: array vacío.
+   *                            Si hay cualquier error: array vacío
+   *                            con la marca kecError = true.
    */
   function getUpcoming(maxResults) {
     var max = normalizeMaxResults(maxResults);
@@ -284,7 +299,7 @@
       return upcoming;
     }).catch(function (err) {
       console.warn('[KECalendar] No se pudieron cargar los próximos eventos:', err);
-      return [];
+      return errorResult();
     });
   }
 
@@ -309,7 +324,8 @@
    * @param {number} [maxResults=10]  Cuántos eventos como máximo.
    * @returns {Promise<Array>}  Eventos crudos de la API (pasar cada uno
    *                            por formatEvent antes de mostrarlo).
-   *                            Si hay cualquier error: array vacío.
+   *                            Si hay cualquier error: array vacío
+   *                            con la marca kecError = true.
    */
   function getPast(maxResults) {
     var max = normalizeMaxResults(maxResults);
@@ -342,7 +358,7 @@
       return recent;
     }).catch(function (err) {
       console.warn('[KECalendar] No se pudieron cargar los eventos pasados:', err);
-      return [];
+      return errorResult();
     });
   }
 
@@ -378,7 +394,11 @@
    *    pasarlos por KECalendar.escapeHtml (ver cabecera del archivo).
    */
   function formatEvent(event, lang) {
-    var locale = lang === 'eu' ? 'eu' : 'es';
+    // Cadena de locales: si el navegador no trae datos de euskera (los
+    // grandes sí los traen, pero por si acaso), Intl usaría su idioma
+    // por defecto — que puede ser cualquiera. Con ['eu', 'es'] el plan B
+    // es castellano, nunca un idioma aleatorio.
+    var locale = lang === 'eu' ? ['eu', 'es'] : 'es';
     var safeEvent = event || {};
     var start = safeEvent.start || {};
 

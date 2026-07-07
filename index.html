@@ -39,6 +39,7 @@
 
       <nav class="header-nav" id="main-nav">
         <ul class="nav-list">
+          <li><a href="#agenda" class="nav-link">Agenda</a></li>
           <li><a href="#encuentros" class="nav-link">Encuentros</a></li>
           <li><a href="#talleres" class="nav-link">Talleres</a></li>
           <li><a href="#quienes-somos" class="nav-link">Quienes somos</a></li>
@@ -53,6 +54,35 @@
     <div class="container hero-content">
       <h1 class="hero-claim">ESPACIO COMUNITARIO DE EXPERIMENTACION ARTISTICA</h1>
       <p class="hero-location">Bilbao, Euskadi</p>
+    </div>
+  </section>
+
+  <section id="agenda" class="section section--alt" data-agenda-section>
+    <div class="container">
+      <h2 class="section-title">EGITARAUA</h2>
+      <p class="section-subtitle">Agenda</p>
+
+      <!-- Los eventos los pinta js/agenda.js leyendo el Google Calendar
+           de la asociación (js/calendar.js). Aquí solo viven los textos
+           de estado, para que cada idioma tenga los suyos. -->
+      <div data-agenda="upcoming">
+        <div class="agenda-grid" data-agenda-list></div>
+
+        <!-- Estado vacío. Otras redacciones que se barajaron:
+             · "Agenda despejada, cabeza tramando. Lo próximo está al caer."
+             · "Nada en cartel esta semana. Pásate por Olabeaga o síguenos
+                en Instagram: lo próximo se está cociendo." -->
+        <p class="agenda-note" data-agenda-empty hidden>El kilker está afinando: ahora mismo no hay nada programado. Vuelve pronto — aquí siempre acaba sonando algo.</p>
+        <p class="agenda-note" data-agenda-error hidden>La agenda no responde ahora mismo. Vuelve a intentarlo dentro de un rato.</p>
+      </div>
+
+      <button type="button" class="btn-outline agenda-past-toggle" data-agenda-past-toggle aria-expanded="false" aria-controls="agenda-pasados">Eventos pasados</button>
+
+      <div id="agenda-pasados" class="agenda-past" data-agenda="past" hidden>
+        <div class="agenda-grid" data-agenda-list></div>
+        <p class="agenda-note" data-agenda-empty hidden>El archivo está aún por estrenar.</p>
+        <p class="agenda-note" data-agenda-error hidden>La agenda no responde ahora mismo. Vuelve a intentarlo dentro de un rato.</p>
+      </div>
     </div>
   </section>
 
@@ -186,6 +216,8 @@
     </div>
   </footer>
 
+  <script src="js/calendar.js"></script>
+  <script src="js/agenda.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
