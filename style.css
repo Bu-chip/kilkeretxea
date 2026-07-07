@@ -103,6 +103,12 @@ img {
   display: block;
 }
 
+/* El atributo hidden debe ganar siempre, aunque el elemento tenga
+   display propio (grid, flex...) en alguna clase */
+[hidden] {
+  display: none !important;
+}
+
 /* ── Utilidades de texto ── */
 .text-primary   { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
@@ -410,6 +416,103 @@ img {
   margin-bottom: var(--space-2);
 }
 
+/* ── Agenda (Egitaraua) ── */
+
+/* Tarjetas de evento: sin caja, estilo cartel — una pleca de color a la
+   izquierda (cian/lima alternos), fecha como antetítulo y título Bebas */
+.agenda-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.agenda-card {
+  border-left: 3px solid var(--cyan-400);
+  padding: var(--space-1) 0 var(--space-1) var(--space-4);
+}
+
+.agenda-card:nth-child(even) {
+  border-left-color: var(--lime-400);
+}
+
+.agenda-card-date {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cyan-800);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.agenda-card:nth-child(even) .agenda-card-date {
+  color: var(--lime-800);
+}
+
+.agenda-card-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.agenda-card-meta {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--carbon-600);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.agenda-card-desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 640px;
+}
+
+/* Mensajes de estado (agenda vacía / error): tono editorial, sin caja */
+.agenda-note {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0;
+}
+
+/* Botón discreto para desplegar los eventos pasados (hereda .btn-outline) */
+.agenda-past-toggle {
+  margin-top: var(--space-7);
+  cursor: pointer;
+  background: none;
+  font-size: var(--text-sm);
+}
+
+/* Bloque de pasados: mismas tarjetas en versión "archivo", apagadas */
+.agenda-past {
+  margin-top: var(--space-6);
+}
+
+.agenda-past .agenda-card,
+.agenda-past .agenda-card:nth-child(even) {
+  border-left-color: var(--carbon-200);
+}
+
+.agenda-past .agenda-card-date,
+.agenda-past .agenda-card:nth-child(even) .agenda-card-date {
+  color: var(--carbon-600);
+}
+
+.agenda-past .agenda-card-title {
+  color: var(--carbon-600);
+}
+
 /* ── About (Nor gara) ── */
 .about-gallery {
   display: grid;
@@ -638,6 +741,15 @@ img {
 
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .agenda-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-7) var(--space-6);
+  }
+
+  .agenda-card-title {
+    font-size: var(--text-2xl);
   }
 
   .card--featured {

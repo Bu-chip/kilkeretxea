@@ -11,6 +11,9 @@ kilkir_etxea_web/
 │   └── index.html      (versión EU)
 ├── style.css           (sistema de diseño + estilos)
 ├── script.js           (menú mobile + selector idioma)
+├── js/
+│   ├── calendar.js     (módulo KECalendar: lee Google Calendar, API v3)
+│   └── agenda.js       (pinta la sección de agenda con KECalendar)
 ├── img/                (fotos optimizadas, WebP)
 ├── CLAUDE.md           (este archivo)
 └── README.md
@@ -52,11 +55,14 @@ kilkir_etxea_web/
 ### Secciones de la página (en este orden)
 1. Header (fondo #4E635D, logo verde lima, nav blanco)
 2. Hero (foto + overlay 60% + claim Bebas Neue 48px)
-3. Tailerrak / Talleres (fondo #EFF2EE, grid tarjetas)
-4. Topaketak / Encuentros (fondo #DDE3DE, grid tarjetas)
-5. Nor gara / Quiénes somos (fondo #EFF2EE, foto + texto + tags)
-6. Kontaktua / Contacto (fondo #DDE3DE)
-7. Footer (fondo #4E635D)
+3. Egitaraua / Agenda (fondo #DDE3DE, tarjetas de eventos desde Google
+   Calendar vía js/calendar.js + js/agenda.js; textos de estado en el
+   HTML de cada idioma)
+4. Topaketak / Encuentros (fondo #EFF2EE, grid tarjetas)
+5. Tailerrak / Talleres (fondo #DDE3DE, grid tarjetas)
+6. Nor gara / Quiénes somos (fondo #EFF2EE, foto + texto + tags)
+7. Kontaktua / Contacto (fondo #DDE3DE)
+8. Footer (fondo #4E635D)
 
 ### Idiomas
 - index.html = versión ES
